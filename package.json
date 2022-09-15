@@ -7,7 +7,7 @@
     "start": "eleventy --serve --quiet",
     "editorconfig": "editorconfig-checker",
     "test": "npm run editorconfig",
-    "build": "eleventy"
+    "build": "eleventy --quiet && npx gulp"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "autoprefixer": "^10.4.11",
-    "del": "^7.0.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.1",
     "gulp-rev": "^9.0.0",
