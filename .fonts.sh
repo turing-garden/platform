@@ -2,8 +2,11 @@ GENERATE_FONT() {
   for i in "${!SUBSETNAMES[@]}"; do
     for j in "${!FORMATS[@]}"; do
       for k in "${!FILENAMES[@]}"; do
+        INPUT="$INPUTPATH/${FILENAMES[k]}-subset.${FORMATS[j]}"
+        OUTPUT="$OUTPUTPATH/${FILENAMES[k]}-${SUBSETNAMES[i]}.${FORMATS[j]}"
+        echo "----------------\n$INPUT -> $OUTPUT\n----------------\n"
         glyphhanger --whitelist="${SUBSETCODES[i]}" --formats="${FORMATS[j]}" --subset="$INPUTPATH/${FILENAMES[k]}.$EXTENSION" --css
-        mv $(echo "$INPUTPATH/${FILENAMES[k]}-subset.${FORMATS[j]}") $(echo "$OUTPUTPATH/${FILENAMES[k]}-${SUBSETNAMES[i]}.${FORMATS[j]}")
+        mv $(echo "$INPUT") $(echo "$OUTPUT")
       done
     done
   done
