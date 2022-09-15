@@ -1,4 +1,6 @@
 module.exports = function(config) {
+  config.addPassthroughCopy('src/fonts');
+
   config.addFilter('ruDate', (value) => {
     return value.toLocaleString('ru', {
       year: 'numeric',
