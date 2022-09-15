@@ -1,5 +1,3 @@
-/* Fonts */
+@charset 'utf-8';
 
-@import 'fonts/fira-code.css';
-@import 'fonts/fira-math.css';
-@import 'fonts/fira-sans.css';
+@import 'fonts.css';
