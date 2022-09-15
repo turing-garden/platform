@@ -4,6 +4,7 @@
   "description": "Platform for building of technical and science documentation site",
   "main": "index.js",
   "scripts": {
+    "start": "eleventy --serve --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/turing-garden/platform/issues"
   },
-  "homepage": "https://github.com/turing-garden/platform#readme"
+  "homepage": "https://github.com/turing-garden/platform#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
 }
