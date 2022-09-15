@@ -6,7 +6,8 @@
   "scripts": {
     "start": "eleventy --serve --quiet",
     "editorconfig": "editorconfig-checker",
-    "test": "npm run editorconfig"
+    "test": "npm run editorconfig",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
