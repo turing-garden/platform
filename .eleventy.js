@@ -1,5 +1,10 @@
+const mathjaxPlugin = require("eleventy-plugin-mathjax");
+
 module.exports = function(config) {
   config.addPassthroughCopy('src/fonts');
+
+  // a plugin that displays math equations in svg format
+  config.addPlugin(mathjaxPlugin);
 
   config.addFilter('ruDate', (value) => {
     return value.toLocaleString('ru', {
